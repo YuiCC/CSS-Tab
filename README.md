@@ -1,4 +1,4 @@
-# CSS Tab :  a browser extension for chrome and firefox
+# CSS Tab :  a browser extension for chrome and firefox to custom web style
 ### chrome: https://chrome.google.com/webstore/detail/ilojhknndidandcnddodcifecemkhadj
 ### firefox: https://addons.mozilla.org/en-US/firefox/addon/css_tab/
 ## functions：
