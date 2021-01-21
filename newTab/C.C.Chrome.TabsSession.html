@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tabs Session</title>
+    <meta name="viewport" content="height=device-height">
+    <script src="../units/log.js"></script>
+    <script src="../units/ChromeAPI.js"></script>
+    <script src="../units/errorTools.js"></script>
+    <script src="../units/timeTools.js"></script>
+    <script src="../units/netConnect.js"></script>
+    <link rel="stylesheet" href="../CSS/C.C.Note.css" />
+    <link rel="stylesheet" href="../plugins/chromeBookmarks.css">
+</head>
+
+<body id="bodyBackground" class="cc-NewTabBackground  zeroMargin cc-noScrollBar">
+    <div class="cc-flex-container zeroMargin transparent">
+
+        <div class="cc-flex-item-side transparent  ">
+            <div class="  cc-marginTop-middle">
+                <input id='TabsSessionSearch' style="width:95%" class="cc-background-dark-3 font-white-red" placeholder=" Search ">
+            </div>
+            <div id='CurrentTabsSessionId' class="font-green-dark cc-background-dark-3 pointer tabsInfo cc-marginHeight-small-10">
+                <span class="fontSize-small font-white-red"><b>Current Tabs Session</b></span>
+                <span class="cc-nowrap" id="CurrentTabsSessionInfo"><b></b></span>
+            </div>
+            <div id='TabsSessionAutoSaved' class="font-green-dark cc-background-dark-3 pointer tabsInfo cc-marginHeight-small-10">
+                <span class="fontSize-small font-white-red"><b>Auto Saved</b></span>
+                <span class="cc-nowrap" id="CurrentTabsSessionInfo"><b></b></span>
+            </div>
+            <div id="SavedTabsSession" class="font-green-dark  cc-marginHeight-small-10 fontSize-small">
+                <p class="cc-background-dark-3 font-white-red"><b >Saved Tabs Session : </b><b id="SavedTabsSessionNum"></b></p>
+            </div>
+        </div>
+
+
+        <div class="cc-flex-container-column transparent">
+
+            <div class="cc-flex-item transparent   cc-marginTop-middle " style="min-height:33px !important;">
+
+                <button class="pointer  cc-circle-30 configButton transparent font-white-red" id="SaveCurrentTabsSession"><b>Save
+                        Current Tabs Session</b></button>
+                <button  id="UndoDeleteSavedTab" style="margin-left:50px" class="pointer  cc-circle-30 configButton transparent font-green-dark "><b id='UndoDeleteSavedTabTxt'>Undo Delete Saved Tab</b></button>
+            </div>
+
+            <div id='TabsSessionOpertion' class="cc-flex-item transparent" style="min-height:60px !important;">
+                <dl class="zeroMargin ">
+                    <dt class="zeroMargin cc-oneline">
+                        <dl class="zeroMargin cc-oneline" style="width: 239px !important;">
+                            <dt class="zeroMargin "><button class="pointer cc-border-btn-a cc-circle-30   transparent font-white-red" ><b id="TabsSessionNameRightSide"></b></button></dt>
+                            <dt class="zeroMargin "><button class="pointer cc-border-btn-a  cc-circle-30   transparent font-white-red" ><b id="TabsSessionTime"></b></button></dt>
+                        </dl>
+                        <button id="TabsOpenSetOfWindows" style=" " class="pointer  cc-circle-30   transparent font-white-red" ><b ></b>Open Set Of Windows</button>
+                        <button id="TabsOpenToOneWindow" style=" " class="pointer   cc-circle-30   transparent font-white-red" ><b ></b>Open To One Window</button>
+                        <button id="TabsSessionImport" style=" " class="pointer   cc-circle-30   transparent font-white-red" ><b ></b>Import</button>
+                        <button id="TabsSessionExport" style=" " class="pointer  cc-circle-30   transparent font-white-red" ><b ></b>Export</button>
+                        <button id="TabsSessionDelete" style=" " class="pointer   cc-circle-30   transparent font-white-red" ><b ></b>Delete</button>
+                        <button id="ReNameTabsSession" style=" " class="pointer   cc-circle-30   transparent font-white-red" ><b ></b>Rename</button>
+                        <button id="MergeToTabsSession" style=" " class="pointer   cc-circle-30   transparent font-white-red" ><b ></b>Merge To</button>
+                        
+                    </dt>
+                </dl>
+
+            </div>
+
+            <div id='TabsSessionDetail' class="cc-flex-item transparent  cc-marginHeight-small-10 ">
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="../units/arithmeticUnits.js"></script>
+    <script src="../units/common.js"></script>
+    <script src="../units/commonBusiness.js"></script>
+    <script src="../plugins/chromeBookmarks.js"></script>
+  <script src="../plugins/clockWidget.js"></script>
+    <script src="../units/DomTools.js"></script>
+    <script src="../units/StringUnits.js"></script>
+
+    <script src="TabsSessionSub.js"></script>
+    <script src="C.C.Chrome.TabsSession.js"></script>
+</body>
+
+</html>

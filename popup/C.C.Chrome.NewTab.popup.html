@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../CSS/C.C.Note.css" />
+	<script src="../units/log.js"></script>
+</head>
+
+<body class="zeroMargin cc-popup">
+	<div class=" zeroMargin">
+		<dl class="cc-top zeroMargin">
+			<dt id="optionsDT">
+				<div id="options" style="position:relative;width:70px;height:70px;left:43%"
+					class="pointer configButton transparent font-green-dark">
+					<img src="../image/settingLogo.jpg" class=" cc-circle" alt="setting" width="65" height="65" />
+					<div style="position:absolute;width:70px;height:10px;left:1px;top:19px;">
+						<b>Options</b>
+					</div>
+				</div>
+			</dt>
+			<dt class="cc-marginHeight-small-3">
+				<button class="pointer  cc-circle-30  configButton transparent font-white-red" id="TabsSession"><b>Tabs
+						Session</b></button>
+				<button class="pointer  cc-circle-30 cc-marginWidth-small configButton transparent font-green-dark"
+					id="SaveCurrentTabsSession"><b>Save Current Tabs Session</b></button>
+
+			</dt>
+			<dt class="cc-marginHeight-small-3">
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark" id="regexSearch" title="Ctrl + Shift + F"><b>Regex
+						Search</b></button>
+
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark" id="saveFullHtml"
+					title="1.Scrolling to bottom to show and save all element;       2.if some content not display:   1)modify the elements in saved html file   2) use the feature saving mhtml file of the browser"><b>save
+						Full Html</b></button>
+
+			</dt>
+			<dt class="cc-marginHeight-small-3">
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark"
+					id="ShowOrHideBookmarks"><b>Show / Hide Bookmarks</b></button>
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark"
+					id="UpdateBookmarks"><b>Update Bookmarks</b></button>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox  " id="ifPictureBackground"><label
+					for="ifPictureBackground" class="pointer cc-label-for  font-green-dark"><b>Use Yours Picture As All Tab's
+						backgroundImage</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox   " id="useDarkBackground"><label
+					for="useDarkBackground" class="pointer cc-label-for  font-green-dark"><b>Dark Background (Refresh To
+						Take Effect)</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox  "
+					id="setPictureAsCssEternal"><label for="setPictureAsCssEternal"
+					class="pointer cc-label-for  font-green-dark"><b>Use This BackgroundImage
+						Eternal</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox  " id="useDefaultCSS"><label
+					for="useDefaultCSS" class="pointer cc-label-for  font-green-dark"><b>Use Default CSS
+						Config</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox  "
+					id="pinThisPictureInNewTab"><label for="pinThisPictureInNewTab"
+					class="pointer  cc-label-for font-green-dark"><b>Pin This BackgroundImage In
+						NewTab</b></label></input>
+			</dt>
+
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox  " id="clockInCSS"><label
+					for="clockInCSS" class="pointer cc-label-for  font-green-dark"><b>ClockInCSS</b></label></input>
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox  " id="ClockInNewTab"><label
+					for="ClockInNewTab"
+					class="pointer  cc-label-for font-green-dark"><b>ClockInNewTab</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox  " id="picturesCategoriesFilter" value="Bike" ><label for="picturesCategoriesFilter" title="if check this, the zero Categories of pictures will not be used as Background" class="pointer cc-label-for  cc-circle  font-green-dark"><b>Pictures Categories Filter</b></label></input>
+			</dt>
+			<dt class="cc-marginHeight-small-3 ">
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark"
+					id="StopRemindTimeSound"><b>Stop RemindTime Sound</b></button>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<button id="bolckedScriptNum"
+					class="pointer cc-circle-30 configButton  transparent font-green-dark"></button>
+				<label for="bolckedScriptNum" class="pointer  cc-label-for font-green-dark"
+					title="click to see details blocked scripts"><b>Block Script:</b> </label>
+
+				<input type="checkbox" class="pointer  configButton cc-circle-checkbox"
+					id="BlockScriptOnThisSite"></input>
+				<label for="BlockScriptOnThisSite" id="BlockScriptOnThisSite_label"
+					class="pointer  cc-label-for font-green-dark">Domain</label>
+
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox "
+					id="BlockScriptOnThisSiteNotSubDomain"><label for="BlockScriptOnThisSiteNotSubDomain"
+					id="BlockScriptOnThisSiteNotSubDomain_label" class="pointer cc-label-for font-green-dark"
+					title="">No This SubDomain</label></input>
+
+
+
+			</dt>
+
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox "
+					id="pauseBlockAnyThisTabTemporary"><label for="pauseBlockAnyThisTabTemporary"
+					class="pointer cc-label-for font-green-dark"
+					title="Pause up to ten minutes and  one tab at most each time"><b>Pause Block This Tab: Any
+						Items</b></label></input>
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox "
+					id="pauseBlockThirdPartySubFrameTemporary"><label for="pauseBlockThirdPartySubFrameTemporary"
+					title="Pause up to ten minutes and  one tab at most each time"
+					class="pointer cc-label-for font-green-dark"><b>Pause Block This Tab: Third Party
+						SubFrame</b></label></input>
+				<!--<button class="pointer circle configButton transparent font-green-dark" id="pauseBlockTrackerTemporary" ><b>Pause Block Tracker 4 Mins On This Tab</b></button> -->
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox "
+					id="pauseBlockTrackerTemporary"><label for="pauseBlockTrackerTemporary"
+					title="Pause up to ten minutes and  one tab at most each time"
+					class="pointer cc-label-for font-green-dark"><b>Pause Block This Tab: Tracker</b></label></input>
+				<!--<button class="pointer circle configButton transparent font-green-dark" id="pauseBlockTrackerTemporary" ><b>Pause Block Tracker 4 Mins On This Tab</b></button> -->
+			</dt>
+			<dt class=" cc-marginHeight-small-3">
+				<input type="checkbox" class="pointer configButton cc-circle-checkbox "
+					id="pauseBlockAllTemporary"><label for="pauseBlockAllTemporary"
+					class="pointer cc-label-for font-green-dark"
+					title="Pause up to ten minutes at most each time"><b>Pause Block All &ensp; Tab:
+						All</b></label></input>
+				<!--<button class="pointer circle configButton transparent font-green-dark" id="pauseBlockTrackerTemporary" ><b>Pause Block Tracker 4 Mins On This Tab</b></button> -->
+			</dt>
+			<dt id="BlockedThirdPartySubFrameDt" class="cc-marginHeight-small-3">
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark"
+					id="BlockedThirdPartySubFrame"><b
+						id="BlockedThirdPartySubFrameNum">BlockedThirdPartySubFrameNumCurrentTab:</b></button>
+			</dt>
+			<dt id="BlockedTrackerDt" class="cc-marginHeight-small-3">
+				<button class="pointer  cc-circle-30 configButton transparent font-green-dark" id="BlockedTracker"><b
+						id="BlockedTrackerNum">BlockedTracker:</b></button>
+			</dt>
+		</dl>
+	</div>
+	<script src="../units/DataDepository.js"></script>
+	<script src="../units/arithmeticUnits.js"> </script>
+	<script src="../units/ChromeAPI.js"> </script>
+	<script src="../units/DomTools.js"> </script> 
+	<script src="../units/timeTools.js"> </script> 
+	<script src="../units/StringUnits.js"></script>
+	<script src="../units/commonBusiness.js"> </script> 
+	<script src="C.C.Chrome.NewTab.popup.js"> </script>
+
+</body>
+
+</html>

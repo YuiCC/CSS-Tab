@@ -1,0 +1,42 @@
+/*
+
+*/
+.ccTreeFlexContainer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: column nowrap;
+	font-weight: bold;	
+	/*
+	text-align: right;
+	*/
+	width: 100%;
+	height: 95%;
+	
+}
+
+.ccTreeFlexItem {
+
+	/*
+	background-color: cornflowerblue;
+	*/
+	
+	width: 100%;
+	height: 100%;
+	text-align: right ;
+	margin-left: auto;
+	flex: 5%;
+}
+
+.ccTreeFlexItem2 {
+
+	/*
+	background-color: cornflowerblue;
+	*/
+ 
+	width: 60%;
+	height: 100%;
+	margin-left: auto;
+	flex: 95%;
+	overflow: auto;
+}

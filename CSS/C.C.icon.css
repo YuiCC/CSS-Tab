@@ -1,0 +1,104 @@
+[class*=cc-icon-][class*=Circle] {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 10px
+}
+
+[class*=cc-icon-] {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: currentColor;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr
+}
+[class*=cc-icon-check][class*=Circle], [class*=cc-icon-][class*=Circle], [class*=cc-icon-][class*=Square] {
+    border: 3px solid  rgb(13, 238, 189) !important;
+
+}
+[class*=cc-icon-],
+[class*=cc-icon-] * {
+    box-sizing: border-box
+}
+[class*=cc-icon-caret][class*=Circle]:after,
+[class*=cc-icon-caret][class*=Circle]:before,
+[class*=cc-icon-caret][class*=Square]:after,
+[class*=cc-icon-caret][class*=Square]:before {
+    width: 17px;
+    right: 7px;
+    padding: 1px;
+    font-weight: bold
+}
+[class*=cc-icon-]:after,
+[class*=cc-icon-]:before {
+    color:  rgb(13, 238, 189);
+    content: '';
+    border: 1px solid  rgb(0, 0, 0);
+    letter-spacing: 01px !important;
+	text-shadow: 0 0 1px #000000,
+		0 0 4px #000000,
+		0 0 6px #000000,
+		0 0 5px #000000,
+		0 0 4px #000000,
+		0 0 2px #000000,
+		0 0 4px #000000,
+		0 0 3px #000000 !important;
+    pointer-events: none
+}
+.cc-icon-circle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 6px
+}
+
+.cc-icon-caretDownCircle,
+.cc-icon-caretUpCircle {
+    width: 12px;
+    height: 20px;
+    margin: 7px 11px
+}
+
+.cc-icon-caretDownCircle:after,
+.cc-icon-caretDownCircle:before,
+.cc-icon-caretUpCircle:after,
+.cc-icon-caretUpCircle:before {
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 2px;
+    box-shadow: inset 0 0 0 32px;
+    -webkit-transform-origin: right;
+    transform-origin: right
+}
+
+.cc-icon-caretDownCircle:before,
+.cc-icon-caretUpCircle:before  {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.cc-icon-caretDownCircle:after,
+.cc-icon-caretUpCircle:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+ 
+.cc-icon-caretUpCircle {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+
+
+.cc-icon-caretDownCircle {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}

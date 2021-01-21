@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,firefox=1">
+	<title>New Tab</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<script src="../units/log.js"></script>
+	<script src="../units/ChromeAPI.js"></script>
+	<script src="../units/errorTools.js"></script>
+	<script src="../units/timeTools.js"></script>
+	<link rel="stylesheet" href="../CSS/C.C.Note.css"> 
+	<link rel="stylesheet" href="../CSS/C.C.icon.css">
+	<link rel="stylesheet" href="../plugins/chromeBookmarks.css">
+</head>
+
+<body id="bodyBackground" class="cc-NewTabBackground">
+
+
+	<div id="textarea"></div>
+
+	<div id="settingDiv">
+		<div id="quickSetDiv">
+			<img class="pointer cc-circle cc-rightTopCornerInWindow" id="PicSettings" src="../image/settingLogo.jpg" alt="setting"
+			 width="40" height="40">
+
+			<div id="quickSet" class="cc-absolute cc-bottom cc-right cc-top-5 cc-topLayer hide cc-height-20">
+				<dl>
+					<dt>
+						<button class=" pointer cc-circle configButton cc-background-dark font-white-red" id="nextPicture"><b>NextPicture</b></button>
+					</dt>
+					<dt>
+						<button class=" pointer cc-circle configButton cc-background-dark font-white-red" id="prePicture"><b>PrePicture</b></button>
+					</dt>
+				</dl>
+			</div>
+
+		</div>
+		<div class="hide cc-settingTab" id="NewTabSetting">
+
+			<div class="cc-rightTopCorner  font-bold font-white-red cc-topLayer-3nd cc-background-dark-3" id="closeNewTabSetting">
+				<button data-closeId="NewTabSetting" id="closeNewTabSettingButton" class='cc-topLayer pointer  cc-circle-30  cc-close transparent font-green-dark cc-noborder'><b>close</b></button>
+			</div>
+
+
+			<div class="cc-center cc-fullwidth font-white-red">
+
+				<dl class="cc-top  ">
+					<dt class="cc-background-dark-3  cc-marginHeight-small  " style="width:200px">
+
+						<a class="cc-no-underline font-white-red pointer  transparent" href="C.C.Chrome.TabsSession.html" target="target"
+						 style="text-overflow: ellipsis;margin-left: 45px"><b>Tabs Session</b> </a>
+
+					</dt>
+					<dt class="cc-background-dark-3  cc-circle-30  ">
+						<input type="checkbox" class="pointer  configButton cc-circle-checkbox  " id="ifPictureBackground" value="Bike"><label
+						 for="ifPictureBackground" class="pointer cc-label-for  cc-circle  font-green-dark"><b>Use Picture As All Tab's
+								backgroundImage</b></label></input>
+						<input type="checkbox" class="pointer  configButton cc-circle-checkbox  " id="picturesCategoriesFilter" value="Bike" title="if not check this, the zero Categories of pictures will be invalid"><label
+								for="picturesCategoriesFilter"  title="if check this, the zero Categories of pictures will not be used as Background" class="pointer cc-label-for  cc-circle  font-green-dark"><b>Pictures Categories Filter</b></label></input>
+					</dt>
+
+					<dt class="cc-background-dark-3  cc-circle-30   ">
+						<input type="checkbox" class="pointer   configButton cc-circle-checkbox  " id="setPictureAsCssEternal" value="Bike"><label
+						 for="setPictureAsCssEternal" class="pointer cc-label-for cc-circle   font-green-dark"><b>Use This
+								BackgroundImage Eternal</b></label></input>
+						<input type="checkbox" class="pointer    configButton cc-circle-checkbox " id="pinThisPictureInNewTab" value="Bike"><label
+						 for="pinThisPictureInNewTab" class="pointer cc-label-for cc-circle   font-green-dark"><b>Pin This
+								BackgroundImage In NewTab</b></label></input>
+					</dt>
+
+
+					<dt class="cc-background-dark-3  cc-circle-30  cc-marginHeight-small-10">
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="config_picture_path"><b>Config
+								Pictures Path</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="config_css"><b>Config Css</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="config_css_match_sites"><b>Config Css Match Sites</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="resizeCssPicture"><b>Resize Css Picture</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="pinSpecifyPictureInSomeSites"><b>Pin Specify Picture In Some Sites</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="blockItems"><b> Block  Items </b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="csFunctions"><b> Custom Functions </b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="advance"><b>Advance</b></button>
+					</dt>
+
+					<dt class="cc-background-dark-3  cc-circle-30  cc-marginHeight-small">
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="recentlyUsedPictures"><b>Recently
+								Used Pictures</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="showFavorites"><b>Show
+								Favorites</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="showPicturesThatNotExists"><b>Show Pictures Inexistence</b></button>
+						<button class="cc-button-padding pointer  cc-circle-30  configButton transparent font-green-dark" id="showLogs"><b>Show Logs</b></button>
+					
+					</dt>
+
+					<dt class="cc-background-dark-3  cc-circle-30  cc-marginHeight-small">
+						<input id="interval_time_to_change" class=" cc-circle-30  cc-text-right transparent font-green-dark" type="number"
+						 placeholder='interval  time (second)' title="second"></input>
+						<button class="pointer  cc-circle-30  blod transparent font-green-dark" id="save_interval_time_to_change" title="second"><b>Set Interval Time To Change Pictures</b></button>
+					</dt>
+
+					<dt class="cc-background-dark-3  cc-circle-30 ">
+						<input id="showMsgOnTitleTime" class=" cc-circle-30  cc-text-right transparent font-green-dark" type="number"
+						 placeholder='MsgOnTitleTime=input*2 (s)' title="MsgOnTitleTime=input*2 (second)"></input>
+						<button class="pointer  cc-circle-30  configButton transparent font-green-dark" id="save_showMsgOnTitleTime" title="MsgOnTitleTime=input*2 (second)"><b>Set Message Time On Title</b></button>
+					</dt> 
+					<br/>
+					<dt class="cc-background-dark-3  cc-circle-30  ">
+						<button class="pointer  cc-circle-30  configButton transparent font-green-dark cc-marginRight-middle" id="ExportSettings"><b>Export Settings</b></button>
+
+						<button class="pointer  cc-circle-30  configButton transparent font-green-dark" id="ImportSettings"><b>Import Settings</b></button>
+
+					</dt>
+					<br>
+					<!--   <hr>  <br> -->
+
+				<!--
+						<dt>
+						<label class='cc-top zeroMargin  cc-background-dark-3'>PictureAsCssEternal : </label></li>
+					</dt>
+					<dt>
+						<textarea id='showPictureAsCssEternal' class='font-white-red cc-background-dark-3 cc-fullwidth zeroMargin cc-noborder'
+						 readonly="readonly"></textarea>
+					</dt>
+				-->
+					<dt>
+						<label class='cc-top zeroMargin  cc-background-dark-3'>Previous Picture : </label></li>
+					</dt>
+					<dt>
+						<textarea id='showPreviousPicture' class='font-white-red cc-background-dark-3 cc-fullwidth zeroMargin cc-noborder'
+						 readonly="readonly"></textarea>
+					</dt>
+					<dt>
+						<label class='cc-top zeroMargin  cc-background-dark-3'>Current New Tab Picture : </label></li>
+					</dt>
+					<dt>
+						<textarea id='showCurrentNewTabPicture' class='font-white-red cc-background-dark-3 cc-fullwidth zeroMargin cc-noborder'
+						 readonly="readonly"></textarea>
+					</dt>
+					<dt>
+						<label class='cc-top zeroMargin  cc-background-dark-3'>Current CSS Picture : </label></li>
+					</dt>
+					<dt>
+						<textarea id='showCurrentCSSPicturePath' class='font-white-red cc-background-dark-3 cc-fullwidth zeroMargin cc-noborder'
+						 readonly="readonly"></textarea>
+					</dt>
+					<dt>
+						<label class='cc-top zeroMargin  cc-background-dark-3'>Next Picture : </label></li>
+					</dt>
+					<dt>
+						<textarea id='showNextPicture' class='font-white-red cc-background-dark-3 cc-fullwidth zeroMargin cc-noborder'
+						 readonly="readonly"></textarea>
+					</dt>
+
+				</dl>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="config_textarea_div" class="hide cc-inputFloat">
+
+		<input id="textareaSearch" class="cc-inputX cc-background-dark-8 font-white-red cc-wrap" placeholder="Search"></input>
+
+		<div id="textareaSearchResult" class="hide cc-searchResult cc-background-dark-5 font-white-red cc-fullwidth cc-topLayer">
+		</div>
+		<div class="cc-topLayer">
+
+			<button data-closeId="config_textarea_div" id="close_config_textarea" class="pointer cc-circle cc-close cc-rightTopCorner transparent font-green-dark cc-topLayer"><b>Close</b></button>
+
+			<dl>
+				<dt class="cc-rightTopBottom cc-topLayer">
+					<button id="clearConfigTextarea" class="pointer cc-circle transparent font-green-dark"><b>Clear</b></button>
+					<button id="previousPicturePage" data-type="pageNum" class="pointer cc-circle transparent font-green-dark"><b>Previous</b></button>
+					<input id="currentPicturePage" data-type="pageNum" type="number" class="cc-narrowInput transparent font-green-dark"></input>
+					<button id="allPicturePage" data-type="pageNum" class="pointer cc-circle transparent font-green-dark">ALL</button>
+					<button id="nextPicturePage" data-type="pageNum" class="pointer cc-circle transparent font-green-dark"><b>Next</b></button>
+
+					<button id="save_config_textarea" class="pointer cc-circle transparent font-green-dark"><b>Save</b></button>
+
+					<input type="checkbox" class="pointer cc-circle-checkbox configButton cc-checkbok-m  hide" id="ifPinPicInSites"
+					 value="Bike"><label for="ifPinPicInSites" id="ifPinPicInSitesLabel" class="pointer cc-circle  font-green-dark hide"><b>enablePinPicInSites</b></label></input>
+					<button id="importTrackerData" type='file' class="pointer cc-circle transparent font-green-dark hide"><b>ImportTrackerData</b></button>
+					<button id="editAdFilterRule" class="pointer cc-circle transparent font-green-dark hide"><b>EditAdFilterRule</b></button>
+				</dt>
+			</dl>
+
+
+
+		</div>
+		<div>
+			<textarea autocorrect="off" autocapitalize="off" spellcheck="false" id="config_textarea" class="cc-inputFloat cc-background-dark-8"
+			 name="11111"></textarea>
+		</div>
+
+	</div>
+
+	<!--
+	<script src="defaultCSS.js"></script>
+	
+	-->
+	<script src="../units/DataDepository.js"></script>
+	 
+	<script src="../units/arithmeticUnits.js"></script>
+	<script src="../units/DomTools.js"></script>
+	<script src="../plugins/chromeBookmarks.js"></script>
+	<script src="../plugins/clockWidget.js"></script>
+	<script src="../plugins/scrollTopOrBottom.js"></script>
+
+	
+	<script src="../units/StringUnits.js"></script>
+	<script src="../units/netConnect.js"></script>
+	<script src="../units/common.js"></script>
+	<script src="../units/commonBusiness.js"></script>
+
+	<script src="TabsSessionSub.js"></script>
+	<script src="C.C.Note.NewTab.js"></script>
+
+</body>
+
+</html>

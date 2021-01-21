@@ -1,0 +1,18 @@
+
+Build:  Use builder.py to build ! ! !
+
+
+
+Functions:
+      1.chang new tab background;
+      2.easily set any local picture as others web site's or  tab background image;  
+      3.many pictures can be use in it, 
+      4.picture can change randomly when fresh or open  new tab overtime set;
+
+Tips:
+      0.set " Allow access to file URLs" in "manage Extensions"
+      1.to set local picture as others web site's background,  config css is necessary,  there is one default css config
+      2.when config css,empty the background url ,but with leave quoting ,like this:  background: url("");
+      3.when config picture path ,input pictures full path,like this:
+               C:\_Temp\111.png
+               C:\_Temp\ttt 01.jpg
